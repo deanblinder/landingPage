@@ -14,10 +14,16 @@
   flex-direction: column;
   border-radius: 0;
   backdrop-filter: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 .sidebar.open {
   left: 0;
   right: auto;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 .sidebar .close {
   background: #f0f4ff;
@@ -64,7 +70,7 @@
 }
 @media (max-width: 600px) {
   .sidebar {
-    width: 100vw;
+    width: 40vw;
     border-radius: 0;
     padding: 1.2rem 0.7rem 1.2rem 0.7rem;
   }
