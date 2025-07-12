@@ -5,7 +5,7 @@ interface TopbarProps {
   onBurgerClick?: () => void;
 }
 
-const Topbar: React.FC<TopbarProps> = ({ onBurgerClick }) => {
+const Topbar: React.FC<TopbarProps> = () => {
   return (
     <header className="topbar landing-topbar">
       <div className="logo">MyApp</div>
