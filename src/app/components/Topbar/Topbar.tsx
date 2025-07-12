@@ -15,11 +15,11 @@ const Topbar: React.FC<TopbarProps> = ({ onBurgerClick }) => {
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button className="burger" aria-label="Open menu" onClick={onBurgerClick}>
+      {/* <button className="burger" aria-label="Open menu" onClick={onBurgerClick}>
         <span />
         <span />
         <span />
-      </button>
+      </button> */}
     </header>
   );
 };
