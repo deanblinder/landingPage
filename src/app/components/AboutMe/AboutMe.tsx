@@ -1,12 +1,16 @@
 import React from "react";
+import Image from "next/image";
 import "./AboutMe.css";
 
 const AboutMe: React.FC = () => (
   <section id="about" className="aboutme-section">
-    <img
+    <Image
       src="https://randomuser.me/api/portraits/men/32.jpg"
       alt="Avatar"
       className="aboutme-avatar"
+      width={96}
+      height={96}
+      priority
     />
     <h2 className="aboutme-title">About Me</h2>
     <p className="aboutme-text">

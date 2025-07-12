@@ -13,7 +13,7 @@ const ContactMe: React.FC = () => {
   return (
     <section className="contactme-section" id="contact">
       <h2 className="contactme-title">Connect With Me</h2>
-      <p className="contactme-subtitle">I'd love to hear from you! Fill out the form or reach out via social links below.</p>
+      <p className="contactme-subtitle">I&apos;d love to hear from you! Fill out the form or reach out via social links below.</p>
       <form className="contactme-form" onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Your Name" required className="contactme-input" />
         <input type="email" name="email" placeholder="Your Email" required className="contactme-input" />

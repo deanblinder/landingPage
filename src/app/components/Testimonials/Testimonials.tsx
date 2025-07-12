@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import "./Testimonials.css";
 
 const testimonials = [
@@ -65,7 +66,7 @@ const Testimonials: React.FC = () => {
         <div className="testimonial-scroll">
           {testimonials.map((t, idx) => (
             <div className="testimonial-card" key={idx}>
-              <img src={t.avatar} alt={t.author} className="testimonial-avatar" />
+              <Image src={t.avatar} alt={t.author} className="testimonial-avatar" width={64} height={64} priority={idx === 0} />
               <blockquote className="testimonial-quote">“{t.quote}”</blockquote>
               <div className="testimonial-author">{t.author}</div>
             </div>
@@ -78,7 +79,7 @@ const Testimonials: React.FC = () => {
             <div className="testimonial-cards-group">
               {show.map((t, idx) => (
                 <div className="testimonial-card" key={safeIndex + idx}>
-                  <img src={t.avatar} alt={t.author} className="testimonial-avatar" />
+                  <Image src={t.avatar} alt={t.author} className="testimonial-avatar" width={64} height={64} priority={safeIndex + idx === 0} />
                   <blockquote className="testimonial-quote">“{t.quote}”</blockquote>
                   <div className="testimonial-author">{t.author}</div>
                 </div>

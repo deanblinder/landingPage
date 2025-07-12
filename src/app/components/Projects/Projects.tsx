@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import "./Projects.css";
 
 const projects = [
@@ -42,7 +43,7 @@ const Projects: React.FC = () => {
         <div className="projects-scroll">
           {projects.map((project, idx) => (
             <div className="project-card project-card-mobile" key={idx}>
-              <img src={project.image} alt={project.title} className="project-image" />
+              <Image src={project.image} alt={project.title} className="project-image" width={400} height={170} priority={idx === 0} />
               <div className="project-content">
                 <h3 className="project-name">{project.title}</h3>
                 <p className="project-desc">{project.description}</p>
@@ -54,7 +55,7 @@ const Projects: React.FC = () => {
         <div className="projects-list">
           {projects.map((project, idx) => (
             <div className="project-card" key={idx}>
-              <img src={project.image} alt={project.title} className="project-image" />
+              <Image src={project.image} alt={project.title} className="project-image" width={400} height={170} priority={idx === 0} />
               <div className="project-content">
                 <h3 className="project-name">{project.title}</h3>
                 <p className="project-desc">{project.description}</p>
