@@ -17,7 +17,7 @@
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   min-height: 340px;
   position: relative;
 }
@@ -42,7 +42,8 @@
   padding: 2.2rem 2rem 2rem 2rem;
   position: relative;
   z-index: 1;
-  height: 100%;
+  height: 340px;
+  box-sizing: border-box;
 }
 .testimonial-avatar {
   width: 64px;
@@ -64,6 +65,7 @@
   color: #0070f3;
   font-weight: 700;
   text-align: center;
+  margin-top: auto;
 }
 .carousel-btn {
   background: #f0f4ff;
@@ -178,12 +180,10 @@
   .testimonial-carousel {
     min-height: 320px;
   }
-  .testimonial-cards-group {
-    gap: 1.2rem;
-  }
   .testimonial-card {
     min-width: 220px;
     max-width: 320px;
+    height: 320px;
   }
 }
 @media (max-width: 700px) {

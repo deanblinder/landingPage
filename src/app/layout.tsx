@@ -30,7 +30,7 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{padding: "0 20px"}}>
         <Topbar onBurgerClick={() => setSidebarOpen(true)} />
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         {children}

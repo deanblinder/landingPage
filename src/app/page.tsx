@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Hero from "./components/Hero/Hero";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
+import Pricing from "./components/Pricing/Pricing";
 import Testimonials from "./components/Testimonials/Testimonials";
 import ContactMe from "./components/ContactMe/ContactMe";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Projects />
+      <Pricing />
       <Testimonials />
       <ContactMe />
     </main>
