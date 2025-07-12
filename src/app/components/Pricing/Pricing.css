@@ -114,6 +114,7 @@
   width: 100vw;
   max-width: 100vw;
   box-sizing: border-box;
+
 }
 .pricing-scroll .pricing-card-mobile {
   flex: 0 0 85vw;
@@ -125,6 +126,11 @@
 }
 .pricing-scroll::-webkit-scrollbar {
   display: none;
+}
+.pricing-card:hover, .pricing-card:active {
+  box-shadow: 0 8px 32px rgba(0,112,243,0.13);
+  transform: translateY(-6px) scale(1.04);
+  z-index: 2;
 }
 @media (max-width: 900px) {
   .pricing-cards {
@@ -156,6 +162,8 @@
   }
   .pricing-scroll {
     display: flex;
+    padding: 0 1rem;
+
   }
   .pricing-card-mobile {
     padding: 1.2rem 0.7rem 1.2rem 0.7rem;

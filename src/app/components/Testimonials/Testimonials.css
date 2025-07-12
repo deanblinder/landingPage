@@ -119,6 +119,7 @@
   width: 100vw;
   max-width: 100vw;
   box-sizing: border-box;
+
 }
 .testimonial-scroll .testimonial-card {
   flex: 0 0 85vw;
@@ -127,10 +128,14 @@
   scroll-snap-align: center;
   margin: 0 auto;
   box-sizing: border-box;
+  
 }
 .testimonial-scroll::-webkit-scrollbar {
   display: none;
 }
 @media (max-width: 600px) {
+    .testimonial-scroll {
+        padding: 0 1rem;
+    }
   
 } 

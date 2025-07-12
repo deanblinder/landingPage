@@ -35,7 +35,6 @@ function useIsMobile() {
 
 const Projects: React.FC = () => {
   const isMobile = useIsMobile();
-  console.log('### ismobile',isMobile)
   return (
     <section className="projects-section" id="projects">
       <h2 className="projects-title">Projects</h2>

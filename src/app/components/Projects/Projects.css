@@ -101,6 +101,7 @@
   width: 100vw;
   max-width: 100vw;
   box-sizing: border-box;
+  padding: 0 1rem;
 }
 .projects-scroll .project-card-mobile {
   flex: 0 0 85vw;

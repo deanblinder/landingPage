@@ -94,6 +94,12 @@
   border-radius: 2px;
   transition: background 0.18s;
 }
+.topbar, .topbar.landing-topbar {
+  background: #f8faff;
+  border-bottom: 1.5px solid #e6eeff;
+  width: 100vw;
+}
+
 @media (max-width: 900px) {
   .topbar.landing-topbar {
     padding: 0 1.2rem;
