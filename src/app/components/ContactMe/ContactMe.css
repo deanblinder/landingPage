@@ -1,0 +1,112 @@
+.contactme-section {
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px rgba(0,112,243,0.07);
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactme-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.contactme-subtitle {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.contactme-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+.contactme-input,
+.contactme-textarea {
+  width: 100%;
+  padding: 0.9em 1em;
+  border: 1.5px solid #e0e7ff;
+  border-radius: 0.7em;
+  font-size: 1.05rem;
+  color: #222;
+  background: #f8faff;
+  transition: border 0.18s;
+  resize: none;
+}
+.contactme-input:focus,
+.contactme-textarea:focus {
+  border: 1.5px solid #0070f3;
+  outline: none;
+}
+.contactme-btn {
+  background: linear-gradient(90deg, #0070f3 60%, #00c6fb 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 2em;
+  padding: 0.7em 1.8em;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,112,243,0.10);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.contactme-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.contactme-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #0051a8 60%, #00aaff 100%);
+  box-shadow: 0 4px 18px rgba(0,112,243,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+.contactme-socials {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.contactme-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0f4ff;
+  transition: background 0.18s;
+  text-decoration: none;
+}
+.contactme-social:hover {
+  background: #e6eeff;
+}
+.contactme-social svg {
+  display: block;
+}
+@media (max-width: 600px) {
+  .contactme-section {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 100%;
+    margin-top: 2.5rem;
+  }
+  .contactme-title {
+    font-size: 1.3rem;
+  }
+  .contactme-input,
+  .contactme-textarea {
+    font-size: 0.98rem;
+    padding: 0.7em 0.7em;
+  }
+  .contactme-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7em 0;
+  }
+} 

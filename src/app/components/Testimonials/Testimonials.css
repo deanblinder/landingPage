@@ -1,0 +1,209 @@
+.testimonials-section {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2.5rem;
+}
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  min-height: 340px;
+  position: relative;
+}
+.testimonial-cards-group {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex: 1;
+}
+.testimonial-card {
+  flex: 1 1 0;
+  min-width: 260px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,112,243,0.07);
+  padding: 2.2rem 2rem 2rem 2rem;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+.testimonial-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,112,243,0.10);
+}
+.testimonial-quote {
+  font-size: 1.18rem;
+  color: #222;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.testimonial-author {
+  font-size: 1.08rem;
+  color: #0070f3;
+  font-weight: 700;
+  text-align: center;
+}
+.carousel-btn {
+  background: #f0f4ff;
+  border: none;
+  color: #0070f3;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  z-index: 2;
+  position: relative;
+  top: 0;
+}
+.carousel-btn:hover {
+  background: #e6eeff;
+  color: #0051a8;
+}
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  cursor: pointer;
+  transition: background 0.18s;
+  display: inline-block;
+}
+.carousel-dot.active {
+  background: #0070f3;
+}
+.testimonial-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1.2rem;
+  margin: 0 -0.5rem;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+.testimonial-scroll .testimonial-card {
+  flex: 0 0 85vw;
+  max-width: 350px;
+  min-width: 260px;
+  scroll-snap-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 600px) {
+  .testimonials-section {
+    margin-top: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  .testimonial-carousel {
+    min-height: 0;
+    gap: 0.5rem;
+    overflow-x: hidden;
+  }
+  .testimonial-cards-group {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
+  }
+  .testimonial-card {
+    min-width: 0;
+    max-width: 95vw;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 1.2rem;
+  }
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.7rem;
+  }
+  .testimonial-quote {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .testimonial-author {
+    font-size: 1rem;
+  }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 1100px) {
+  .testimonial-carousel {
+    min-height: 320px;
+  }
+  .testimonial-cards-group {
+    gap: 1.2rem;
+  }
+  .testimonial-card {
+    min-width: 220px;
+    max-width: 320px;
+  }
+}
+@media (max-width: 700px) {
+  .testimonial-carousel {
+    flex-direction: column;
+    min-height: 0;
+    gap: 0.5rem;
+  }
+  .testimonial-cards-group {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .testimonial-card {
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-btn {
+    align-self: center;
+    margin: 0.5rem 0;
+  }
+} 

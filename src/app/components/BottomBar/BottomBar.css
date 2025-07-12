@@ -1,0 +1,65 @@
+.bottombar {
+  width: 100%;
+  background: #f8faff;
+  border-top: 1.5px solid #e0e7ff;
+  padding: 1.2rem 0;
+  position: relative;
+  z-index: 100;
+  margin-top: 4rem;
+}
+.bottombar-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 0 2rem;
+}
+.bottombar-copy {
+  color: #888;
+  font-size: 1rem;
+}
+.bottombar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.bottombar-links a {
+  color: #0070f3;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.bottombar-links a:hover {
+  color: #0051a8;
+}
+@media (max-width: 700px) {
+  .bottombar-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0 1rem;
+  }
+  .bottombar-links {
+    gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .bottombar {
+    padding: 0.7rem 0;
+    margin-top: 2rem;
+  }
+  .bottombar-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0 0.7rem;
+  }
+  .bottombar-copy {
+    font-size: 0.95rem;
+  }
+  .bottombar-links {
+    gap: 0.7rem;
+  }
+} 

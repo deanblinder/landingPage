@@ -112,4 +112,20 @@
   .cta-btn {
     display: none;
   }
+}
+@media (max-width: 600px) {
+  .topbar,
+  .topbar.landing-topbar {
+    padding: 0 0.5rem;
+    height: 56px;
+  }
+  .logo {
+    font-size: 1.2rem;
+    padding: 0.2em 0.7em;
+  }
+  .burger {
+    width: 44px;
+    height: 44px;
+    padding: 0.4rem;
+  }
 } 
