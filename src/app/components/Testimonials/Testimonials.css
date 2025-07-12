@@ -133,9 +133,120 @@
 .testimonial-scroll::-webkit-scrollbar {
   display: none;
 }
+@media (max-width: 768px) {
+  .testimonials-section {
+    margin-top: 3.5rem;
+    padding: 0 0.5rem;
+  }
+  .testimonials-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .testimonial-carousel {
+    gap: 1.5rem;
+    min-height: 320px;
+  }
+  .testimonial-cards-group {
+    gap: 1.5rem;
+  }
+  .testimonial-card {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+    height: 320px;
+  }
+  .testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+  }
+  .testimonial-quote {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .testimonial-author {
+    font-size: 1rem;
+  }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width: 600px) {
-    .testimonial-scroll {
-        padding: 0 1rem;
-    }
-  
+  .testimonials-section {
+    margin-top: 3rem;
+  }
+  .testimonials-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-carousel {
+    gap: 1rem;
+    min-height: 300px;
+  }
+  .testimonial-cards-group {
+    gap: 1rem;
+  }
+  .testimonial-card {
+    min-width: 260px;
+    max-width: 300px;
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    height: 300px;
+  }
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.8rem;
+  }
+  .testimonial-quote {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .testimonial-author {
+    font-size: 0.95rem;
+  }
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+  .testimonial-scroll {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .testimonials-section {
+    margin-top: 2rem;
+  }
+  .testimonials-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .testimonial-card {
+    min-width: 240px;
+    max-width: 280px;
+    padding: 1.2rem 1rem 1rem 1rem;
+    height: 280px;
+  }
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.6rem;
+  }
+  .testimonial-quote {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
 } 

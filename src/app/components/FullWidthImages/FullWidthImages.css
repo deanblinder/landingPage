@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   background: #f7faff;
-
-
 }
+
 .fullwidthimages-row {
   display: block;
   width: 100vw;
 }
+
 .fullwidthimages-img {
   width: 100vw;
   height: 320px;
@@ -19,15 +19,36 @@
   padding: 0;
   transition: transform 0.18s;
 }
+
 .fullwidthimages-img:hover {
   transform: scale(1.03);
   z-index: 2;
 }
+
 .imagegallery-title{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .fullwidthimages-img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fullwidthimages-img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fullwidthimages-img {
+    height: 200px;
+  }
+}
+
 @media (min-width: 900px) {
   .fullwidthimages-img {
     height: 400px;

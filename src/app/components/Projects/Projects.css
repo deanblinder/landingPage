@@ -114,15 +114,19 @@
 .projects-scroll::-webkit-scrollbar {
   display: none;
 }
-@media (max-width: 700px) {
-  /* .projects-section {
-    margin-top: 2.5rem;
+@media (max-width: 768px) {
+  .projects-section {
+    margin-top: 3.5rem;
     padding: 0 0.5rem;
-    background-color: red;
+  }
+  .projects-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
   .projects-list {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
   .project-card {
     padding: 1rem 0.5rem 1.2rem 0.5rem;
@@ -130,21 +134,97 @@
     max-width: 100%;
   }
   .project-image {
-    height: 110px;
+    height: 140px;
   }
   .project-name {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .project-desc {
-    font-size: 0.98rem;
+    font-size: 1rem;
   }
   .projects-carousel {
     max-width: 100%;
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
   .projects-carousel .carousel-btn {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-section {
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+  .projects-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .projects-scroll {
+    padding: 0.5rem 1rem 1.5rem;
+    gap: 1.2rem;
+  }
+  .project-card-mobile {
+    flex: 0 0 90%;
+    padding: 0;
+    border-radius: 1.2rem;
+  }
+  .project-image {
+    height: 160px;
+  }
+  .project-content {
+    padding: 1.2rem 1rem;
+  }
+  .project-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-section {
+    margin-top: 2rem;
+  }
+  .projects-title {
     font-size: 1.3rem;
-  } */
-} 
+    margin-bottom: 1.2rem;
+  }
+  .project-image {
+    height: 100px;
+  }
+  .project-name {
+    font-size: 0.95rem;
+  }
+  .project-desc {
+    font-size: 0.9rem;
+  }
+  .projects-carousel .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .projects-section {
+    margin-top: 1.5rem;
+  }
+  .projects-title {
+    font-size: 1.2rem;
+  }
+  .project-image {
+    height: 90px;
+  }
+  .project-name {
+    font-size: 0.9rem;
+  }
+  .project-desc {
+    font-size: 0.85rem;
+  }
+}
