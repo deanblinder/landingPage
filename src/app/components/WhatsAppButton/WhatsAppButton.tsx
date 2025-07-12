@@ -3,7 +3,7 @@ import "./WhatsAppButton.css";
 
 const WhatsAppButton: React.FC = () => (
   <a
-    href="https://wa.me/1234567890" // Replace with your WhatsApp number
+    href="https://wa.me/+972523980151" // Replace with your WhatsApp number
     className="whatsapp-float"
     target="_blank"
     rel="noopener noreferrer"
