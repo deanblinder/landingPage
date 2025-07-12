@@ -58,7 +58,7 @@
   transition: max-height 0.18s, opacity 0.18s;
 }
 @media (max-width: 700px) {
-  .faq-section {
+  /* .faq-section {
     margin-top: 2.5rem;
     padding: 0 0.5rem;
   }
@@ -77,5 +77,5 @@
     font-size: 0.98rem;
     padding-bottom: 1rem;
     padding-right: 0.5rem;
-  }
+  } */
 } 

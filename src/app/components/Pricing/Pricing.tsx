@@ -82,7 +82,7 @@ const Pricing: React.FC = () => {
       ) : (
         <div className="pricing-cards">
           {plans.map((plan, idx) => (
-            <div className={`pricing-card${plan.highlight ? " highlight" : ""}`} key={idx}>
+            <div className={`pricing-card`} key={idx}>
               <div className="pricing-name">{plan.name}</div>
               <div className="pricing-price">
                 <span className="pricing-amount">{plan.price}</span>

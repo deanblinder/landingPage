@@ -5,6 +5,7 @@
 
 html {
   color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 html,

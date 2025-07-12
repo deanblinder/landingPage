@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 
 const Hero: React.FC = () => (
-  <section className="hero-section">
+  <section className="hero-section" id="features">
     <h1 className="hero-title">
       Welcome to MyApp
     </h1>

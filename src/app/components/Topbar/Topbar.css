@@ -34,8 +34,11 @@
   background: #e6eeff;
 }
 .nav-desktop {
+  align-items: center;
+  justify-content: center;
   display: flex;
   gap: 2.5rem;
+  height: 100;
 }
 .nav-desktop a {
   color: #222;
