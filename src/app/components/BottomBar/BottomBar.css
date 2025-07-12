@@ -34,6 +34,25 @@
 .bottombar-links a:hover {
   color: #0051a8;
 }
+@media (max-width: 768px) {
+  .bottombar {
+    padding: 1rem 0;
+    margin-top: 3rem;
+  }
+  .bottombar-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+  .bottombar-links {
+    gap: 1.2rem;
+  }
+  .bottombar-copy {
+    font-size: 0.98rem;
+    text-align: center;
+  }
+}
 @media (max-width: 700px) {
   .bottombar-content {
     flex-direction: column;
@@ -61,5 +80,24 @@
   }
   .bottombar-links {
     gap: 0.7rem;
+  }
+}
+@media (max-width: 380px) {
+  .bottombar {
+    padding: 0.6rem 0;
+    margin-top: 1.5rem;
+  }
+  .bottombar-content {
+    padding: 0 0.5rem;
+    gap: 0.4rem;
+  }
+  .bottombar-copy {
+    font-size: 0.9rem;
+  }
+  .bottombar-links {
+    gap: 0.6rem;
+  }
+  .bottombar-links a {
+    font-size: 0.9rem;
   }
 } 
