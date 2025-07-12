@@ -1,95 +1,28 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main style={{ minHeight: "80vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "linear-gradient(120deg, #f0f4ff 0%, #fff 100%)" }}>
+      <section style={{ textAlign: "center", marginTop: "4rem" }}>
+        <h1 style={{ fontSize: "3rem", fontWeight: 800, color: "#222", marginBottom: "1.2rem", letterSpacing: "-1px" }}>
+          Welcome to MyApp
+        </h1>
+        <p style={{ fontSize: "1.35rem", color: "#444", marginBottom: "2.2rem", maxWidth: 600, marginLeft: "auto", marginRight: "auto" }}>
+          The easiest way to launch your next project. Modern, fast, and beautiful by default.
+        </p>
+        <a href="#features" style={{
+          display: "inline-block",
+          background: "linear-gradient(90deg, #0070f3 60%, #00c6fb 100%)",
+          color: "#fff",
+          fontWeight: 700,
+          fontSize: "1.18rem",
+          borderRadius: "2em",
+          padding: "0.8em 2.2em",
+          textDecoration: "none",
+          boxShadow: "0 2px 12px rgba(0,112,243,0.10)",
+          transition: "background 0.18s, box-shadow 0.18s, transform 0.18s"
+        }}>Get Started</a>
+      </section>
+    </main>
   );
 }
