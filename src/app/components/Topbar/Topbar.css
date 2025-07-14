@@ -106,20 +106,23 @@
 }
 
 .burger {
-  display: none;
+  display: flex !important;
   flex-direction: column;
-  gap: 0.3rem;
-  background: none;
-  border: none;
+  gap: 0.5rem;
   cursor: pointer;
   padding: 0.8rem;
   border-radius: 50%;
-  transition: all 0.3s ease;
   margin-left: 1rem;
   width: 48px;
   height: 48px;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1001;
+  min-width: 48px;
+  min-height: 48px;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .burger:hover {
@@ -127,18 +130,29 @@
   transform: scale(1.1);
 }
 
+.burger:active {
+  background: rgba(0, 112, 243, 0.15);
+  transform: scale(0.95);
+}
+
 .burger span {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background: #0070f3;
+  display: block !important;
+  width: 30px !important;
+  height: 5px !important;
+  background: #000 !important;
+  border: 1px solid blue !important;
   border-radius: 2px;
-  transition: all 0.3s ease;
-  transform-origin: center;
+  margin: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .burger:hover span {
   background: #0051a8;
+}
+
+.burger:active span {
+  background: #003d7a;
 }
 
 /* Mobile Responsive Design */
@@ -200,6 +214,10 @@
 
   .burger {
     display: flex;
+    visibility: visible;
+    opacity: 1;
+    background: none;
+    border: none;
   }
 }
 
