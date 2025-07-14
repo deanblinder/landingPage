@@ -1,44 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import "./Testimonials.css";
-
-const testimonials = [
-  {
-    quote:
-      "This app made launching my project a breeze. The design is beautiful and the experience is seamless!",
-    author: "Alice Smith",
-    avatar:
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=128&h=128&q=80",
-  },
-  {
-    quote:
-      "I love how easy it was to get started. The support was fantastic and the features are top-notch.",
-    author: "Bob Johnson",
-    avatar:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=128&h=128&q=80",
-  },
-  {
-    quote:
-      "A truly modern web experience. Fast, reliable, and looks amazing on every device.",
-    author: "Carol Lee",
-    avatar:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=128&h=128&q=80",
-  },
-  {
-    quote:
-      "The best investment I made for my business this year. Highly recommended!",
-    author: "David Kim",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=128&h=128&q=80",
-  },
-  {
-    quote: "Support was quick and helpful. The app is intuitive and powerful.",
-    author: "Eva Green",
-    avatar:
-      "https://images.unsplash.com/photo-1519340333755-c1aa5571fd46?auto=format&fit=facearea&w=128&h=128&q=80",
-  },
-];
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -54,8 +18,46 @@ function useIsMobile() {
 }
 
 const Testimonials: React.FC = () => {
+  const { t } = useTranslation("common");
   const isMobile = useIsMobile();
   const [index, setIndex] = useState(0);
+
+  // Use useMemo to ensure testimonials update when translations change
+  const testimonials = useMemo(
+    () => [
+      {
+        quote: t("TESTIMONIAL_1_QUOTE"),
+        author: t("TESTIMONIAL_1_AUTHOR"),
+        avatar:
+          "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=128&h=128&q=80",
+      },
+      {
+        quote: t("TESTIMONIAL_2_QUOTE"),
+        author: t("TESTIMONIAL_2_AUTHOR"),
+        avatar:
+          "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=128&h=128&q=80",
+      },
+      {
+        quote: t("TESTIMONIAL_3_QUOTE"),
+        author: t("TESTIMONIAL_3_AUTHOR"),
+        avatar:
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=128&h=128&q=80",
+      },
+      {
+        quote: t("TESTIMONIAL_4_QUOTE"),
+        author: t("TESTIMONIAL_4_AUTHOR"),
+        avatar:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=128&h=128&q=80",
+      },
+      {
+        quote: t("TESTIMONIAL_5_QUOTE"),
+        author: t("TESTIMONIAL_5_AUTHOR"),
+        avatar:
+          "https://images.unsplash.com/photo-1519340333755-c1aa5571fd46?auto=format&fit=facearea&w=128&h=128&q=80",
+      },
+    ],
+    [t]
+  );
 
   useEffect(() => {
     if (!isMobile) setIndex(0);
@@ -71,7 +73,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section className="testimonials-section" id="testimonials">
-      <h2 className="testimonials-title">Testimonials</h2>
+      <h2 className="testimonials-title">{t("TESTIMONIALS_TITLE")}</h2>
       {isMobile ? (
         <div className="testimonial-scroll">
           {testimonials.map((t, idx) => (
@@ -84,7 +86,7 @@ const Testimonials: React.FC = () => {
                 height={64}
                 priority={idx === 0}
               />
-              <blockquote className="testimonial-quote">“{t.quote}”</blockquote>
+              <blockquote className="testimonial-quote">"{t.quote}"</blockquote>
               <div className="testimonial-author">{t.author}</div>
             </div>
           ))}
@@ -111,7 +113,7 @@ const Testimonials: React.FC = () => {
                     priority={safeIndex + idx === 0}
                   />
                   <blockquote className="testimonial-quote">
-                    “{t.quote}”
+                    "{t.quote}"
                   </blockquote>
                   <div className="testimonial-author">{t.author}</div>
                 </div>
