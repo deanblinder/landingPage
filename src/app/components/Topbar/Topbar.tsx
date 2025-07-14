@@ -5,7 +5,7 @@ interface TopbarProps {
   onBurgerClick?: () => void;
 }
 
-const Topbar: React.FC<TopbarProps> = () => {
+const Topbar: React.FC<TopbarProps> = ({ onBurgerClick }) => {
   return (
     <header className="topbar landing-topbar">
       <div className="logo">MyApp</div>
@@ -14,14 +14,15 @@ const Topbar: React.FC<TopbarProps> = () => {
         <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <button className="cta-btn">Get Started</button>
       </nav>
-      {/* <button className="burger" aria-label="Open menu" onClick={onBurgerClick}>
+      <button className="burger" aria-label="Open menu" onClick={onBurgerClick}>
         <span />
         <span />
         <span />
-      </button> */}
+      </button>
     </header>
   );
 };
 
-export default Topbar; 
+export default Topbar;
