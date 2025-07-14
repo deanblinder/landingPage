@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import "./ImageGallery.css";
+import { useTranslation } from "react-i18next";
 
 const images = [
   "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
@@ -13,9 +14,11 @@ const images = [
 ];
 
 const ImageGallery: React.FC = () => {
+  const { t } = useTranslation("common");
+
   return (
     <section className="imagegallery-section" id="gallery">
-      <h2 className="imagegallery-title">Gallery</h2>
+      <h2 className="imagegallery-title">{t("GALLERY_TITLE")}</h2>
       <div className="imagegallery-list">
         {images.map((src, idx) => (
           <Image
