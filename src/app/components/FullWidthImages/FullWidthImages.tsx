@@ -12,6 +12,7 @@ const images = [
 
 const FullWidthImages: React.FC = () => (
   <section className="fullwidthimages-section">
+    <h2 className="fullwidthimages-title">Gallery</h2>
     <div className="fullwidthimages-row">
       {images.map((src, idx) => (
         <Image
@@ -28,4 +29,4 @@ const FullWidthImages: React.FC = () => (
   </section>
 );
 
-export default FullWidthImages; 
+export default FullWidthImages;
