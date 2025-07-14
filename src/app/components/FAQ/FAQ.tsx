@@ -1,31 +1,34 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./FAQ.css";
 
-const faqs = [
-  {
-    q: "What is MyApp?",
-    a: "MyApp is a modern platform to help you launch your next project quickly and beautifully, with all the tools you need built in.",
-  },
-  {
-    q: "Is there a free plan?",
-    a: "Yes! We offer a free plan with basic features so you can get started at no cost.",
-  },
-  {
-    q: "Can I upgrade or downgrade my plan?",
-    a: "Absolutely. You can change your plan at any time from your account dashboard.",
-  },
-  {
-    q: "How do I get support?",
-    a: "You can reach out via our contact form or use the chat widget for instant help.",
-  },
-];
-
 const FAQ: React.FC = () => {
+  const { t } = useTranslation("common");
   const [open, setOpen] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: t("FAQ_QUESTION_1"),
+      a: t("FAQ_ANSWER_1"),
+    },
+    {
+      q: t("FAQ_QUESTION_2"),
+      a: t("FAQ_ANSWER_2"),
+    },
+    {
+      q: t("FAQ_QUESTION_3"),
+      a: t("FAQ_ANSWER_3"),
+    },
+    {
+      q: t("FAQ_QUESTION_4"),
+      a: t("FAQ_ANSWER_4"),
+    },
+  ];
+
   return (
     <section className="faq-section" id="faq">
-      <h2 className="faq-title">Frequently Asked Questions</h2>
+      <h2 className="faq-title">{t("FAQ_TITLE")}</h2>
       <div className="faq-list">
         {faqs.map((item, idx) => (
           <div className={`faq-item${open === idx ? " open" : ""}`} key={idx}>
@@ -52,4 +55,4 @@ const FAQ: React.FC = () => {
   );
 };
 
-export default FAQ; 
+export default FAQ;
