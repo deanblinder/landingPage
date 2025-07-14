@@ -7,13 +7,15 @@
   padding: 0 1rem;
   box-sizing: border-box;
 }
+
 .pricing-title {
   font-size: 2rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 2.5rem;
 }
-.pricing-cards {
+
+.pricing-container {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -24,10 +26,11 @@
   padding: 0 0.5rem;
   box-sizing: border-box;
 }
+
 .pricing-card {
   background: #fff;
   border-radius: 1.5rem;
-  box-shadow: 0 4px 24px rgba(0,112,243,0.07);
+  box-shadow: 0 4px 24px rgba(0, 112, 243, 0.07);
   padding: 2.2rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
@@ -38,14 +41,16 @@
   position: relative;
   transition: transform 0.18s, box-shadow 0.18s;
   margin: 0 0.5rem;
-  height: 400px
+  height: 400px;
 }
+
 .pricing-card.highlight {
   border: 2.5px solid #0070f3;
-  box-shadow: 0 8px 32px rgba(0,112,243,0.13);
+  box-shadow: 0 8px 32px rgba(0, 112, 243, 0.13);
   z-index: 2;
   transform: scale(1.04);
 }
+
 .pricing-name {
   font-size: 1.18rem;
   font-weight: 700;
@@ -53,6 +58,7 @@
   margin-bottom: 0.7rem;
   letter-spacing: 0.5px;
 }
+
 .pricing-price {
   font-size: 2.1rem;
   font-weight: 800;
@@ -62,26 +68,31 @@
   align-items: flex-end;
   gap: 0.2em;
 }
+
 .pricing-amount {
   font-size: 2.1rem;
 }
+
 .pricing-period {
   font-size: 1.1rem;
   color: #888;
   font-weight: 500;
 }
+
 .pricing-features {
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
   width: 100%;
 }
+
 .pricing-features li {
   font-size: 1.05rem;
   color: #444;
   margin-bottom: 0.7rem;
   text-align: center;
 }
+
 .pricing-cta {
   background: linear-gradient(90deg, #0070f3 60%, #00c6fb 100%);
   color: #fff;
@@ -91,56 +102,35 @@
   border-radius: 2em;
   padding: 0.7em 1.8em;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0,112,243,0.10);
+  box-shadow: 0 2px 12px rgba(0, 112, 243, 0.1);
   transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
   margin-top: auto;
 }
+
 .pricing-cta:hover {
   background: linear-gradient(90deg, #0051a8 60%, #00aaff 100%);
-  box-shadow: 0 4px 18px rgba(0,112,243,0.18);
+  box-shadow: 0 4px 18px rgba(0, 112, 243, 0.18);
   transform: translateY(-2px) scale(1.04);
 }
-.pricing-cards::-webkit-scrollbar {
-  display: none;
-}
-.pricing-scroll {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1.2rem;
-  margin: 0 -0.5rem;
-  -webkit-overflow-scrolling: touch;
-  width: 100vw;
-  max-width: 100vw;
-  box-sizing: border-box;
 
-}
-.pricing-scroll .pricing-card-mobile {
-  flex: 0 0 85vw;
-  max-width: 350px;
-  min-width: 260px;
-  scroll-snap-align: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-.pricing-scroll::-webkit-scrollbar {
-  display: none;
-}
-.pricing-card:hover, .pricing-card:active {
-  box-shadow: 0 8px 32px rgba(0,112,243,0.13);
+.pricing-card:hover,
+.pricing-card:active {
+  box-shadow: 0 8px 32px rgba(0, 112, 243, 0.13);
   transform: translateY(-6px) scale(1.04);
   z-index: 2;
 }
+
+/* Media Queries for Responsive Design */
+
 @media (max-width: 900px) {
   .pricing-section {
     margin-top: 4rem;
   }
-  .pricing-cards {
+
+  .pricing-container {
     gap: 1.5rem;
   }
+
   .pricing-card {
     min-width: 280px;
     max-width: 100%;
@@ -148,6 +138,7 @@
     height: auto;
     min-height: 380px;
   }
+
   .pricing-title {
     font-size: 1.8rem;
     margin-bottom: 2rem;
@@ -159,37 +150,49 @@
     margin-top: 3.5rem;
     padding: 0 0.5rem;
   }
+
   .pricing-title {
     font-size: 1.6rem;
     margin-bottom: 1.8rem;
     text-align: center;
   }
-  .pricing-cards {
-    gap: 1.2rem;
+
+  .pricing-container {
+    flex-direction: column;
+    gap: 1.5rem;
     padding: 0;
+    align-items: center;
   }
+
   .pricing-card {
     padding: 1.8rem 1.2rem;
     width: 100%;
+    max-width: 400px;
     margin: 0;
     min-height: 360px;
   }
+
   .pricing-name {
     font-size: 1.15rem;
   }
+
   .pricing-price {
     font-size: 1.9rem;
   }
+
   .pricing-period {
     font-size: 1rem;
   }
+
   .pricing-features {
     margin: 0 0 1.3rem 0;
   }
+
   .pricing-features li {
     font-size: 1rem;
     margin-bottom: 0.7rem;
   }
+
   .pricing-cta {
     font-size: 1.05rem;
     padding: 0.7em 1.7em;
@@ -202,38 +205,44 @@
   .pricing-section {
     margin-top: 3rem;
   }
+
   .pricing-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
     padding: 0 1rem;
   }
-  .pricing-cards {
+
+  .pricing-container {
     gap: 1.5rem;
-    padding: 0;
   }
+
   .pricing-card {
     padding: 1.5rem 1rem;
-    width: 100%;
-    margin: 0;
     min-height: 350px;
   }
+
   .pricing-name {
     font-size: 1.1rem;
   }
+
   .pricing-price {
     font-size: 1.8rem;
   }
+
   .pricing-period {
     font-size: 0.95rem;
   }
+
   .pricing-features {
     margin: 0 0 1.2rem 0;
   }
+
   .pricing-features li {
     font-size: 0.95rem;
     margin-bottom: 0.6rem;
   }
+
   .pricing-cta {
     font-size: 1rem;
     padding: 0.6em 1.6em;
@@ -246,19 +255,24 @@
   .pricing-section {
     margin-top: 2rem;
   }
+
   .pricing-title {
     font-size: 1.3rem;
   }
+
   .pricing-card {
     padding: 1.2rem 0.8rem;
     min-height: 320px;
   }
+
   .pricing-price {
     font-size: 1.6rem;
   }
+
   .pricing-features li {
     font-size: 0.9rem;
   }
+
   .pricing-cta {
     font-size: 0.95rem;
     padding: 0.6em 1.4em;
