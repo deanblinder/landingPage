@@ -106,9 +106,11 @@
 }
 
 .burger {
-  display: flex !important;
+  display: none;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  background: none;
+  border: none;
   cursor: pointer;
   padding: 0.8rem;
   border-radius: 50%;
@@ -121,8 +123,6 @@
   z-index: 1001;
   min-width: 48px;
   min-height: 48px;
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
 .burger:hover {

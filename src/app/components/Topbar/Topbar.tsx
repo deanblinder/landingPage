@@ -14,7 +14,6 @@ const Topbar: React.FC<TopbarProps> = ({ onBurgerClick }) => {
         <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <button className="cta-btn">Get Started</button>
       </nav>
       <button className="burger" aria-label="Open menu" onClick={onBurgerClick}>
         <span />
