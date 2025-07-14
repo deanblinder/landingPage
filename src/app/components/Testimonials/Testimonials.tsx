@@ -117,6 +117,7 @@ const Testimonials: React.FC = () => {
                   <blockquote className="testimonial-quote">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
+
                   <div className="testimonial-author">{t.author}</div>
                 </div>
               ))}
