@@ -86,7 +86,9 @@ const Testimonials: React.FC = () => {
                 height={64}
                 priority={idx === 0}
               />
-              <blockquote className="testimonial-quote">"{t.quote}"</blockquote>
+              <blockquote className="testimonial-quote">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
               <div className="testimonial-author">{t.author}</div>
             </div>
           ))}
@@ -113,7 +115,7 @@ const Testimonials: React.FC = () => {
                     priority={safeIndex + idx === 0}
                   />
                   <blockquote className="testimonial-quote">
-                    "{t.quote}"
+                    &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <div className="testimonial-author">{t.author}</div>
                 </div>
