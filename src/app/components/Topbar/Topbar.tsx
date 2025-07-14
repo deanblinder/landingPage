@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Topbar.css";
 
 interface TopbarProps {
@@ -6,16 +8,22 @@ interface TopbarProps {
 }
 
 const Topbar: React.FC<TopbarProps> = ({ onBurgerClick }) => {
+  const { t } = useTranslation("common");
+
   return (
     <header className="topbar landing-topbar">
-      <div className="logo">MyApp</div>
+      <div className="logo">{t("NAVIGATION_LOGO")}</div>
       <nav className="nav-desktop">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#features">{t("NAVIGATION_FEATURES")}</a>
+        <a href="#pricing">{t("NAVIGATION_PRICING")}</a>
+        <a href="#about">{t("NAVIGATION_ABOUT")}</a>
+        <a href="#contact">{t("NAVIGATION_CONTACT")}</a>
       </nav>
-      <button className="burger" aria-label="Open menu" onClick={onBurgerClick}>
+      <button
+        className="burger"
+        aria-label={t("NAVIGATION_OPEN_MENU")}
+        onClick={onBurgerClick}
+      >
         <span />
         <span />
         <span />

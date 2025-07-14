@@ -1,4 +1,6 @@
+"use client";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./Sidebar.css";
 
 interface SidebarProps {
@@ -7,6 +9,8 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
+  const { t } = useTranslation("common");
+
   // Close sidebar if resizing to desktop
   useEffect(() => {
     function handleResize() {
@@ -45,36 +49,40 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
         onClick={onClose}
       />
       <aside className={`sidebar${open ? " open" : ""}`}>
-        <button className="close" aria-label="Close menu" onClick={onClose}>
+        <button
+          className="close"
+          aria-label={t("NAVIGATION_CLOSE_MENU")}
+          onClick={onClose}
+        >
           ✕
         </button>
         <nav>
           <a href="#features" onClick={(e) => handleNavClick(e, "features")}>
-            Features
+            {t("NAVIGATION_FEATURES")}
           </a>
           <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
-            About
+            {t("NAVIGATION_ABOUT")}
           </a>
           <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>
-            Projects
+            {t("NAVIGATION_PROJECTS")}
           </a>
           <a href="#gallery" onClick={(e) => handleNavClick(e, "gallery")}>
-            Gallery
+            {t("NAVIGATION_GALLERY")}
           </a>
           <a href="#pricing" onClick={(e) => handleNavClick(e, "pricing")}>
-            Pricing
+            {t("NAVIGATION_PRICING")}
           </a>
           <a href="#faq" onClick={(e) => handleNavClick(e, "faq")}>
-            FAQ
+            {t("NAVIGATION_FAQ")}
           </a>
           <a
             href="#testimonials"
             onClick={(e) => handleNavClick(e, "testimonials")}
           >
-            Testimonials
+            {t("NAVIGATION_TESTIMONIALS")}
           </a>
           <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>
-            Contact
+            {t("NAVIGATION_CONTACT")}
           </a>
         </nav>
       </aside>
