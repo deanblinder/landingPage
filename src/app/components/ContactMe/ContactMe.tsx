@@ -1,23 +1,48 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./ContactMe.css";
+import emailjs from "@emailjs/browser";
 
 const ContactMe: React.FC = () => {
   const { t } = useTranslation("common");
   const [submitted, setSubmitted] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 2500);
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // ← Copy from EmailJS dashboard
+        "YOUR_TEMPLATE_ID", // ← Copy from EmailJS dashboard
+        form.current,
+        "YOUR_PUBLIC_KEY" // ← Copy from EmailJS dashboard (API key)
+      )
+      .then(
+        (result) => {
+          console.log("✅ Message sent:", result.text);
+          alert("Message sent successfully!");
+          form.current?.reset();
+        },
+        (error) => {
+          console.log("❌ Failed:", error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      )
+      .finally(() => {
+        setSubmitted(false);
+      });
   };
 
   return (
     <section className="contactme-section" id="contact">
       <h2 className="contactme-title">{t("CONTACT_TITLE")}</h2>
       <p className="contactme-subtitle">{t("CONTACT_SUBTITLE")}</p>
-      <form className="contactme-form" onSubmit={handleSubmit}>
+      <form className="contactme-form" onSubmit={handleSubmit} ref={form}>
         <input
           type="text"
           name="name"
