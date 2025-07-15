@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import "./Testimonials.css";
@@ -18,46 +18,48 @@ function useIsMobile() {
 }
 
 const Testimonials: React.FC = () => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const isMobile = useIsMobile();
   const [index, setIndex] = useState(0);
 
+  // Get arrow characters based on language direction
+  const isRTL = i18n.language === "he";
+  const prevArrow = isRTL ? "&#8594;" : "&#8592;"; // Right arrow for RTL, Left arrow for LTR
+  const nextArrow = isRTL ? "&#8592;" : "&#8594;"; // Left arrow for RTL, Right arrow for LTR
+
   // Use useMemo to ensure testimonials update when translations change
-  const testimonials = useMemo(
-    () => [
-      {
-        quote: t("TESTIMONIAL_1_QUOTE"),
-        author: t("TESTIMONIAL_1_AUTHOR"),
-        avatar:
-          "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=128&h=128&q=80",
-      },
-      {
-        quote: t("TESTIMONIAL_2_QUOTE"),
-        author: t("TESTIMONIAL_2_AUTHOR"),
-        avatar:
-          "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=128&h=128&q=80",
-      },
-      {
-        quote: t("TESTIMONIAL_3_QUOTE"),
-        author: t("TESTIMONIAL_3_AUTHOR"),
-        avatar:
-          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=128&h=128&q=80",
-      },
-      {
-        quote: t("TESTIMONIAL_4_QUOTE"),
-        author: t("TESTIMONIAL_4_AUTHOR"),
-        avatar:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=128&h=128&q=80",
-      },
-      {
-        quote: t("TESTIMONIAL_5_QUOTE"),
-        author: t("TESTIMONIAL_5_AUTHOR"),
-        avatar:
-          "https://images.unsplash.com/photo-1519340333755-c1aa5571fd46?auto=format&fit=facearea&w=128&h=128&q=80",
-      },
-    ],
-    [t]
-  );
+  const testimonials = [
+    {
+      quote: t("TESTIMONIAL_1_QUOTE"),
+      author: t("TESTIMONIAL_1_AUTHOR"),
+      avatar:
+        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=128&h=128&q=80",
+    },
+    {
+      quote: t("TESTIMONIAL_2_QUOTE"),
+      author: t("TESTIMONIAL_2_AUTHOR"),
+      avatar:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=128&h=128&q=80",
+    },
+    {
+      quote: t("TESTIMONIAL_3_QUOTE"),
+      author: t("TESTIMONIAL_3_AUTHOR"),
+      avatar:
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=128&h=128&q=80",
+    },
+    {
+      quote: t("TESTIMONIAL_4_QUOTE"),
+      author: t("TESTIMONIAL_4_AUTHOR"),
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&w=128&h=128&q=80",
+    },
+    {
+      quote: t("TESTIMONIAL_5_QUOTE"),
+      author: t("TESTIMONIAL_5_AUTHOR"),
+      avatar:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=128&h=128&q=80",
+    },
+  ];
 
   useEffect(() => {
     if (!isMobile) setIndex(0);
@@ -100,9 +102,8 @@ const Testimonials: React.FC = () => {
               className="carousel-btn prev"
               onClick={prev}
               aria-label="Previous testimonial"
-            >
-              &#8592;
-            </button>
+              dangerouslySetInnerHTML={{ __html: prevArrow }}
+            />
             <div className="testimonial-cards-group">
               {show.map((t, idx) => (
                 <div className="testimonial-card" key={safeIndex + idx}>
@@ -126,9 +127,8 @@ const Testimonials: React.FC = () => {
               className="carousel-btn next"
               onClick={next}
               aria-label="Next testimonial"
-            >
-              &#8594;
-            </button>
+              dangerouslySetInnerHTML={{ __html: nextArrow }}
+            />
           </div>
           <div className="carousel-dots">
             {Array.from({ length: testimonials.length - 3 + 1 }, (_, i) => (
