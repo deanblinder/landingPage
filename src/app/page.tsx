@@ -7,6 +7,7 @@ import FAQ from "./components/FAQ/FAQ";
 import Testimonials from "./components/Testimonials/Testimonials";
 import ContactMe from "./components/ContactMe/ContactMe";
 import FullWidthImages from "./components/FullWidthImages/FullWidthImages";
+import LanguageSwitcher from "./components/LanguageSwitcher/LanguageSwitcher";
 
 export default function Home() {
   return (
@@ -19,6 +20,19 @@ export default function Home() {
         justifyContent: "center",
       }}
     >
+      <div
+        style={{
+          display: "flex",
+          right: 0,
+          width: "100%",
+          padding: "10px",
+
+          direction: "rtl",
+        }}
+      >
+        <LanguageSwitcher />
+      </div>
+
       <Hero />
       <AboutMe />
       <Projects />

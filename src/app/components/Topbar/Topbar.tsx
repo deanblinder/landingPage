@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import "./Topbar.css";
 
@@ -12,12 +13,15 @@ const Topbar: React.FC<TopbarProps> = ({ onBurgerClick }) => {
 
   return (
     <header className="topbar landing-topbar">
-      <div className="logo">{t("NAVIGATION_LOGO")}</div>
+      <Link href="/" className="logo">
+        {t("NAVIGATION_LOGO")}
+      </Link>
+
       <nav className="nav-desktop">
-        <a href="#features">{t("NAVIGATION_FEATURES")}</a>
-        <a href="#pricing">{t("NAVIGATION_PRICING")}</a>
-        <a href="#about">{t("NAVIGATION_ABOUT")}</a>
-        <a href="#contact">{t("NAVIGATION_CONTACT")}</a>
+        <Link href="/#features">{t("NAVIGATION_FEATURES")}</Link>
+        <Link href="/#pricing">{t("NAVIGATION_PRICING")}</Link>
+        <Link href="/#about">{t("NAVIGATION_ABOUT")}</Link>
+        <Link href="/#contact">{t("NAVIGATION_CONTACT")}</Link>
       </nav>
       <button
         className="burger"

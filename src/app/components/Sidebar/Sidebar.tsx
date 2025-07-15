@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import "./Sidebar.css";
 
@@ -30,15 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
     // eslint-disable-next-line
   }, []);
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    id: string
-  ) => {
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavClick = () => {
     if (onClose) onClose();
   };
 
@@ -57,33 +50,30 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
           ✕
         </button>
         <nav>
-          <a href="#features" onClick={(e) => handleNavClick(e, "features")}>
+          <Link href="/#features" onClick={handleNavClick}>
             {t("NAVIGATION_FEATURES")}
-          </a>
-          <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
+          </Link>
+          <Link href="/#about" onClick={handleNavClick}>
             {t("NAVIGATION_ABOUT")}
-          </a>
-          <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>
+          </Link>
+          <Link href="/#projects" onClick={handleNavClick}>
             {t("NAVIGATION_PROJECTS")}
-          </a>
-          <a href="#gallery" onClick={(e) => handleNavClick(e, "gallery")}>
+          </Link>
+          <Link href="/#gallery" onClick={handleNavClick}>
             {t("NAVIGATION_GALLERY")}
-          </a>
-          <a href="#pricing" onClick={(e) => handleNavClick(e, "pricing")}>
+          </Link>
+          <Link href="/#pricing" onClick={handleNavClick}>
             {t("NAVIGATION_PRICING")}
-          </a>
-          <a href="#faq" onClick={(e) => handleNavClick(e, "faq")}>
+          </Link>
+          <Link href="/#faq" onClick={handleNavClick}>
             {t("NAVIGATION_FAQ")}
-          </a>
-          <a
-            href="#testimonials"
-            onClick={(e) => handleNavClick(e, "testimonials")}
-          >
+          </Link>
+          <Link href="/#testimonials" onClick={handleNavClick}>
             {t("NAVIGATION_TESTIMONIALS")}
-          </a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>
+          </Link>
+          <Link href="/#contact" onClick={handleNavClick}>
             {t("NAVIGATION_CONTACT")}
-          </a>
+          </Link>
         </nav>
       </aside>
     </>
